@@ -1,0 +1,34 @@
+@import "./reset";
+@import "./variables";
+@import "./mixins";
+@import "./maps";
+@import "./functions";
+@import "./lists";
+// Generics
+:root {
+  font-size: 0.785rem;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  padding: nth($padding, -1 ) nth($padding, -1 );
+  font-family: $rubik;
+  font-weight: map-get($rubik-fw, $key:"Regular");
+h1{
+    font-family: $titillium;
+    font-weight: map-get($titillium-fw, $key:"Black");
+  }
+  .main {
+    width: 80%;
+    border: 1px solid $dark;
+    border-radius: $br-1;
+    padding: 1em 2em;
+    margin: 2em auto;
+    margin-top: $margin-top;
+    margin-top: $mt-3;
+    background-image:url($path);
+    background-position: center center;
+    background-size: auto;
+  }
+}
